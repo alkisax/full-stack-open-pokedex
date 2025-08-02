@@ -12,3 +12,12 @@ jobs:
       - name: Say hello
         run: |
           echo "Hello World!"
+  print_date_ls_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print date and list files
+        run: |
+          echo "Current date and time:"
+          date
+          echo "Listing files in the current directory:"
+          ls -l
