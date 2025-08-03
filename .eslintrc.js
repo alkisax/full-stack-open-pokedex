@@ -3,7 +3,7 @@ module.exports = {
     react: {
       version: 'detect',
     },
-  },  
+  },
   'env': {
     'browser': true,
     'es6': true,
@@ -21,17 +21,15 @@ module.exports = {
     'sourceType': 'module'
   },
   'plugins': [
-    'react', 'jest'
+    'react', 'jest', 'cypress',
   ],
   'rules': {
     'indent': [
       'error',
       2
     ],
-    'linebreak-style': [
-      'error',
-      'unix'
-    ],
+    'linebreak-style': 'off',
+
     'quotes': [
       'error',
       'single'
