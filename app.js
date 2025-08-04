@@ -22,3 +22,5 @@ app.listen(PORT, () => {
 })
 
 // minor code change for testing github actions
+const hello = 'hello'
+console.log(hello)
