@@ -43,11 +43,10 @@ jobs:
       
       - name: Notify success
         if: success()
-        uses: rjstone/discord-webhook-notify@v2
-        with:
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-          severity: info
-          text: ✅ Deployment succeeded!
+        run: |
+          curl -X POST ${{ secrets.DISCORD_WEBHOOK }} \
+          -H "Content-Type: application/json" \
+          -d '{"content": "✅ Deployment succeeded!"}'
 
   tag_release:
     needs: [simple_deployment_pipeline]
@@ -72,8 +71,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Notify failure
-        uses: rjstone/discord-webhook-notify@v2
-        with:
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-          severity: error
-          text: ❌ Build or tests failed!
+        run: |
+          curl -X POST ${{ secrets.DISCORD_WEBHOOK }} \
+          -H "Content-Type: application/json" \
+          -d '{"content": "❌ Build or tests failed!"}'
