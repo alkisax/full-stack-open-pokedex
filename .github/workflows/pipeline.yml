@@ -53,5 +53,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DEFAULT_BUMP: patch
       if: ${{ github.event_name == 'push'  && env.CONDITION == 'false'}}
-      uses: anothrNick/github-tag-action@1.73.0
+      uses: anothrNick/github-tag-action@e528bc2b9628971ce0e6f823f3052d1dcd9d512c
+
       
