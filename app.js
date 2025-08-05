@@ -21,4 +21,8 @@ app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`)
 })
 
+// minor code change for testing github actions
+const hello = 'hello'
+console.log(hello)
 
+// just to check version bumps
