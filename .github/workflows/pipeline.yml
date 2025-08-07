@@ -83,3 +83,4 @@ jobs:
           curl -X POST ${{ secrets.DISCORD_WEBHOOK }} \
           -H "Content-Type: application/json" \
           -d '{"content": "❌ Build or tests failed!- by alkisax"}'
+          
